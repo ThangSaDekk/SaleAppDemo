@@ -4,6 +4,7 @@
  */
 package com.nvt.pojo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -11,6 +12,7 @@ import lombok.Data;
  * @author admin
  */
 @Data
+@AllArgsConstructor
 public class Cart {
     private int id;
     private String name;
