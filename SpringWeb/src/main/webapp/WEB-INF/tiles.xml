@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout" template="/WEB-INF/layout/baseLayout.jsp">
+        <put-attribute name="titles" value="....."/>
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp"/>
+        <put-attribute name="content" value="....."/>
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/> 
+    </definition>
+    
+    <definition name="home" extends="baseLayout">
+        <put-attribute name="titles" value="Trang chủ"/>
+        <put-attribute name="content" value="/WEB-INF/pages/index.jsp"/>
+
+    </definition>
+    <definition name="addProduct" extends="baseLayout">
+        <put-attribute name="titles" value="Thêm sản phẩm"/>
+        <put-attribute name="content" value="/WEB-INF/pages/addProduct.jsp"/>
+
+    </definition>
+
+</tiles-definitions>
+
