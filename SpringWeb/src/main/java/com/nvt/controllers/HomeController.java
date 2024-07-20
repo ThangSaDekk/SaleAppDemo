@@ -6,6 +6,7 @@ package com.nvt.controllers;
 
 import com.nvt.service.CategoryService;
 import com.nvt.service.ProductService;
+import java.util.Map;
 import javax.persistence.Query;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -35,9 +37,9 @@ public class HomeController {
     
     
     @RequestMapping("/login")
-    public String login(Model model){
+    public String login(Model model, @RequestParam Map<String, String> params){
         model.addAttribute("cates", this.cateService.getCategory());
-        model.addAttribute("products", prodService.getProducts(null));
+        model.addAttribute("products", this.prodService.getProducts(params));
         return "login";
     }
 }

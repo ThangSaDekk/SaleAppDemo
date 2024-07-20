@@ -76,7 +76,7 @@ public class ProductRepositoryImpl implements ProductRepository{
                 predicates.add(b.lessThanOrEqualTo(root.get("price"), Double.parseDouble(toPrice)));
             }
             if (category != null && !category.isEmpty()) {
-                predicates.add(b.equal(root.get("category"), Integer.parseInt(category)));
+                predicates.add(b.equal(root.get("categoryId"), Integer.parseInt(category)));
             }
         }
 
